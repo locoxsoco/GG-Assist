@@ -30,11 +30,23 @@ cd GG-Assist
 ```
 
 ### 2. Install the G-Assist Plugin
-Ensure you're using the G-Assist framework. This repo contains a plugin with:
+Ensure you're in `plugin/examples/gmail`. This repo contains a plugin with:
 
-* plugin.py — the Gmail handler logic
+* gmail.py — the Gmail handler logic
 * manifest.json — function interface for G-Assist
 * requirements.txt — dependencies
+
+Copy `manifest.json` and paste it in `%PROGRAMDATA%\NVIDIA Corporation\nvtopps\rise\plugins\gmail`
+
+Run:
+
+```
+python -m pip install -r requirements.txt
+pyinstaller --onedir --name g-assist-plugin-gmail gmail.py
+cd dist/g-assist-plugin-gmail
+```
+
+Copy `_internal` and `g-assist-plugin-gmail.exe` and paste it in `%PROGRAMDATA%\NVIDIA Corporation\nvtopps\rise\plugins\gmail`
 
 ### 3. Enable the Gmail API and Obtain Credentials
 
