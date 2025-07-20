@@ -75,6 +75,8 @@ npm install
 npm start
 ```
 
+---
+
 ## 🛠 Tech Stack
 
 * 🧠 Local LLM via G-Assist framework
@@ -82,4 +84,18 @@ npm start
 * 🔐 Gmail API (OAuth2)
 * 🖥 Electron + React frontend
 
----
+
+## 🧠 Learnings
+
+Building GG-Assist provided valuable insight into the capabilities — and limitations — of local LLMs for real-world tasks like email processing.
+
+### 📊 Performance Observations
+
+* On an **RTX 3060 Laptop GPU**, processing a single email of \~1000 characters takes approximately **30-60 seconds** using this local LLM.
+* Even if this time could be faster in stronger hardware, I found it more useful to process emails in batch rather than individually to run these process in the background.
+
+### ⚠️ Challenge: Guardrails and Assistant Behavior
+
+* While this local LLM is capable of correctly extracting structured information in test cases, **guardrails within G-Assist** sometimes prevent consistent responses when the system is integrated end-to-end.
+* Ensuring that the assistant follows the correct response format (e.g., `Event: ... | Date: ...`) requires prompt engineering and fallback logic to prevent the system of crashing.
+* It is worth noticing that, during testing, the local LLM was capable of processing emails in English, Spanish, and Catalan.
