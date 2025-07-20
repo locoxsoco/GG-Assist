@@ -1,0 +1,6 @@
+pywin32>=223
+pyinstaller==6.11.0
+google-auth>=2.0.0
+google-auth-oauthlib>=0.4.6
+google-api-python-client>=2.0.0
+google-auth-httplib2>=0.1.0

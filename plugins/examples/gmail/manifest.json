@@ -1,0 +1,40 @@
+{
+  "manifestVersion": 1,
+  "executable": "./g-assist-plugin-gmail.exe",
+  "persistent": true,
+  "functions": [
+    {
+      "name": "detect_calendar_events_request",
+      "description": "Detect a message is requesting to analize emails for calendar events.",
+      "tags": ["calendar", "event", "emails"],
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "Text to analyze"
+        }
+      }
+    },
+    {
+      "name": "summarize_emails_request",
+      "description": "Detect a message is requesting to summarize emails.",
+      "tags": ["summarize", "emails"],
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "Text to analyze"
+        }
+      }
+    },
+    {
+      "name": "generate_labels_request",
+      "description": "Detect a message is requesting to generate labels for emails.",
+      "tags": ["label", "emails"],
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "Text to analyze"
+        }
+      }
+    }
+  ]
+}
