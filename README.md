@@ -4,6 +4,8 @@
 
 Designed for the [#AIonRTXHackathon](https://developer.nvidia.com), GG-Assist uses a local LLM and the G-Assist plugin framework to extract useful information from your emails while keeping your data 100% private.
 
+[The location of the implemented code is here](https://github.com/locoxsoco/GG-Assist/tree/main/plugins/examples/gmail)
+
 ---
 
 ## ✨ Features
